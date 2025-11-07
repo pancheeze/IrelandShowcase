@@ -1,0 +1,201 @@
+/* ===== Base Styles ===== */
+:root {
+  --navbar-height: 70px;
+  --green-accent: #2e7d32;
+  --glass-blur: 10px;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --amber: #ffc107;
+}
+
+body {
+  background: linear-gradient(to bottom, #a3b8a8, #7f958a);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: hidden;
+  color: #333;
+}
+
+/* ===== Glassmorphic Navbar ===== */
+.navbar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: all 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--green-accent);
+}
+
+/* Amber text utility */
+.text-amber {
+  color: var(--amber) !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url("images/ireland2.jpg") center 40%/cover no-repeat;
+  min-height: 110vh;
+  margin-top: calc(var(--navbar-height) * -1);
+  padding-top: var(--navbar-height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1rem;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Glass Boxes ===== */
+.glass-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.glass-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== About Section ===== */
+#about img {
+  height: 350px;
+  object-fit: cover;
+}
+#about .carousel-caption {
+  font-size: 0.9rem;
+}
+/* Pastel amber background to use for highlighted sections */
+.bg-amber-pastel {
+  background-color: #fff4cc; /* soft pastel amber/yellow */
+  color: #2c3e20; /* darker text for good contrast on amber */
+}
+/* Make carousel captions high-contrast and readable over images */
+#about .carousel-caption,
+#about .carousel-caption h5,
+#about .carousel-caption p,
+#about .carousel-caption .small {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+#about .carousel-caption {
+  z-index: 3;
+}
+/* Stronger caption background to improve contrast (overrides bg-opacity-50) */
+#about .carousel-caption.bg-dark {
+  background-color: rgba(0,0,0,0.62) !important;
+}
+#about .carousel-caption .text-muted {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+#about h2 {
+  color: var(--green-accent);
+}
+#about p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ===== Destinations ===== */
+.destination-card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.28s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Make the whole card animate when activated (on click) */
+.destination-card {
+  transition: transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s ease;
+  cursor: pointer;
+  will-change: transform;
+  position: relative; /* needed for Bootstrap stretched-link to work */
+}
+
+.destination-card.is-active {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Apply image scale only when card is active so everything moves together */
+.destination-card.is-active img {
+  transform: scale(1.08);
+}
+
+/* ===== Gallery Hover ===== */
+.hover-zoom {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 56px;
+  }
+  .hero {
+    min-height: 70vh;
+  }
+  #about img {
+    height: 250px;
+  }
+}

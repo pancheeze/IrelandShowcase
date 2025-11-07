@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Ireland</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav shadow-sm">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold text-success" href="#">DiscoverIreland</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#places">Places</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-white text-center d-flex align-items-center">
+    <div class="container">
+  <h1 class="display-3 fw-bold fade-in">Welcome to <span class="text-amber">Ireland</span></h1>
+      <p class="lead mt-3 fade-in-delay">
+        A land of myths, music, and magnificent landscapes — where every corner tells a story.
+      </p>
+      <a href="#about" class="btn btn-success mt-4 px-4 py-2 rounded-pill shadow">Explore More</a>
+    </div>
+  </section>
+
+  <!-- About Section (Updated Layout) -->
+  <section id="about" class="py-5 bg-amber-pastel">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Left: Carousel -->
+        <div class="col-lg-6">
+          <div id="carouselExampleCaptions" class="carousel slide shadow glass-box" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="images/nature.jpg" class="d-block w-100" alt="Culture and Herritage">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                  <h5 class="fw-bold">Culture and Herritage</h5>
+                  <p class="small text-muted mb-0">Experience the breathtaking views of Ireland’s wild Atlantic coast from one of the most iconic natural landmarks.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/peeps.jpg" class="d-block w-100" alt="Dublin City">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                  <h5 class="fw-bold">Peeple in Ireland</h5>
+                  <p class="small text-muted mb-0">Where history meets modern life — walk the cobbled streets and enjoy the charm of Ireland’s lively capital.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/culture.jpg" class="d-block w-100" alt="Ring of Kerry">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                  <h5 class="fw-bold">breathtaking Nature</h5>
+                  <p class="small text-muted mb-0">Journey through Ireland’s rolling hills, peaceful lakes, and coastal villages full of timeless beauty.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4 text-success">The Heart of the Emerald Isle</h2>
+          <p class="text-muted mb-4">
+            Discover Ireland’s beauty — from its timeless traditions to breathtaking views.
+            This land of legends offers a journey through music, laughter, and landscapes that
+            will capture your soul.
+          </p>
+          <p class="text-muted">
+            Beyond its beauty, Ireland’s heart beats in its people — storytellers, dreamers,
+            and wanderers who make this land feel like home.
+          </p>
+          <a href="#places" class="btn btn-success mt-3 px-4 py-2 rounded-pill shadow">See Destinations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section id="places" class="py-5 bg-amber-pastel">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Places to Discover</h2>
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="destination-card glass-box">
+            <a href="https://www.headout.com/city-cards/3-4-5-7-attractions-dublin-explorer-pass-e-20475/?msclkid=c7a3460889301e464ce02f0569557983&utm_campaign=EMBD_Global&utm_content=Tours-Activities-Ads-placement_Global&utm_medium=cpc&utm_source=bing&utm_term=81639112334267" class="stretched-link" aria-label="View Dublin" target="_blank"></a>
+            <img src="images/dublin.jpg" alt="Dublin" class="w-100 rounded-top" />
+            <div class="p-3">
+              <h5>Dublin</h5>
+              <p>A city full of life, stories, and song — where modern meets history.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="destination-card glass-box">
+            <a href="https://thetalesoftinyboots.com/the-best-cliffs-in-ireland/" target="_blank" class="stretched-link" aria-label="View Cliffs of Moher"></a>
+            <img src="images/cliffs.jpg" alt="Cliffs of Moher" class="w-100 rounded-top" />
+            <div class="p-3">
+              <h5>Cliffs of Moher</h5>
+              <p>Stand above the roaring Atlantic and feel Ireland’s wild spirit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="destination-card glass-box">
+            <a href="https://en.wikipedia.org/wiki/Ring_of_Kerry" target="_blank" class="stretched-link" aria-label="View Ring of Kerry"></a>
+            <img src="images/ring.jpg" alt="Ring of Kerry" class="w-100 rounded-top" />
+            <div class="p-3">
+              <h5>Ring of Kerry</h5>
+              <p>Mountains, lakes, and winding roads — the heart of natural beauty.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="destination-card glass-box">
+            <a href="https://www.headout.com/cliffs-of-moher-ireland/from-dublin-cliffs-of-moher-and-galway-full-day-tour-e-35510/?msclkid=5869dce4c2141012f8c3b5e923e5f6e3&utm_campaign=EMBD_Global&utm_content=Tours-Activities-Ads-placement_Global&utm_medium=cpc&utm_source=bing&utm_term=81639112334267" target="_blank" class="stretched-link" aria-label="View Galway"></a>
+            <img src="images/galway.jpg" alt="Galway" class="w-100 rounded-top" />
+            <div class="p-3">
+              <h5>Galway</h5>
+              <p>Festivals, laughter, and charm — where music fills the air.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Gallery</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><img src="images/gal1.jpg" class="img-fluid rounded hover-zoom" alt="Gallery" /></div>
+        <div class="col-md-4"><img src="images/gal2.jpg" class="img-fluid rounded hover-zoom" alt="Gallery" /></div>
+        <div class="col-md-4"><img src="images/gal3.jpg" class="img-fluid rounded hover-zoom" alt="Gallery" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer: Leprechaun fun facts -->
+  <footer class="footer-leprechaun py-4 text-center">
+    <div class="container">
+      <h5 class="fw-bold text-amber mb-2">Fun Leprechaun Facts</h5>
+      <p class="mb-0 text-light">Leprechauns are mischievous, solitary fairies from Irish folklore — often pictured as shoemakers who hide a pot of gold at the end of a rainbow.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
