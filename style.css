@@ -1,4 +1,4 @@
-/* ===== Base Styles ===== */
+
 :root {
   --navbar-height: 70px;
   --green-accent: #2e7d32;
@@ -114,12 +114,12 @@ body {
 #about .carousel-caption {
   font-size: 0.9rem;
 }
-/* Pastel amber background to use for highlighted sections */
+
 .bg-amber-pastel {
-  background-color: #fff4cc; /* soft pastel amber/yellow */
-  color: #2c3e20; /* darker text for good contrast on amber */
+  background-color: #fff4cc; 
+  color: #2c3e20; 
 }
-/* Make carousel captions high-contrast and readable over images */
+
 #about .carousel-caption,
 #about .carousel-caption h5,
 #about .carousel-caption p,
@@ -130,7 +130,7 @@ body {
 #about .carousel-caption {
   z-index: 3;
 }
-/* Stronger caption background to improve contrast (overrides bg-opacity-50) */
+
 #about .carousel-caption.bg-dark {
   background-color: rgba(0,0,0,0.62) !important;
 }
@@ -153,25 +153,24 @@ body {
   transition: transform 0.28s cubic-bezier(.2,.8,.2,1);
 }
 
-/* Make the whole card animate when activated (on click) */
+
 .destination-card {
   transition: transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s ease;
   cursor: pointer;
   will-change: transform;
-  position: relative; /* needed for Bootstrap stretched-link to work */
-}
+  position: relative;
 
 .destination-card.is-active {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-/* Apply image scale only when card is active so everything moves together */
+
 .destination-card.is-active img {
   transform: scale(1.08);
 }
 
-/* ===== Gallery Hover ===== */
+
 .hover-zoom {
   transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
@@ -180,14 +179,14 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Footer ===== */
+
 footer {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   font-size: 0.9rem;
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 768px) {
   :root {
     --navbar-height: 56px;
